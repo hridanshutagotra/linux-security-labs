@@ -6,6 +6,11 @@ The password for the next level is stored in a hidden file in the inhere directo
 
 ## Solution
 ```bash
-cd inhere
-ls -a
-cat .hidden
+# Move to the directory first
+$ cd inhere
+
+# List all files (including hidden ones)
+$ ls -la
+
+# Read the hidden file
+$ cat .hidden
