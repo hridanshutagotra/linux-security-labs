@@ -7,7 +7,6 @@ Note: This level will serve as introduction to writing bash shell-scripts
 
 ## Theory
 This level requires you to create your own first shell-script. You'll have to again, check the cron process script. The script you'll find basically executes and deletes all the files in a specified folder. For this level, we need to create a script that will give us the password for bandit24 by preventing the early deletion of the password file.
-I will be providing the script file in the same folder alongside this md file.
 
 ## Solution
 ```bash
@@ -19,10 +18,15 @@ $ mktemp -d
 
 # cd into it
 $ cd /tmp/tmp.2tIuL5kV1f
+```
 
-# Create a shell script to take over the running cron activity and get the pass file
-# script file in available in the bandit23 directory where you're reading this solution
-
+Create a shell script with the following code to take over the running cron activity and get the pass file
+```bash
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/tmp.2tIuL5kV1f/password
+```
+Save your script as bandit24_pass.sh then continue
+```bash
 # give your script file the necessary permissions to run
 $ chmod +rx bandit24_pass.sh
 
