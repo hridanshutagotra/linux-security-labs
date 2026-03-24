@@ -12,3 +12,9 @@ Logging in to bandit26 from bandit25 should be fairly easy… The shell for user
 - Finally we have a shell and can get the password for the user
 
 The solution for this level is more for teaching you how to think outside the box to get the password
+
+## Solution
+After managing to get into a shell using the above instrucitions, use the provided bandit27-do file to get the password for the next level
+```bash
+$ ./bandit27-do cat /etc/bandit_pass/bandit27
+
